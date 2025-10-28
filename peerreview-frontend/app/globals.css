@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white min-h-screen;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-accent to-accent-dark text-primary-900 font-semibold px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/50 transition-all;
+  }
+  
+  .nav-link {
+    @apply text-white/80 hover:text-accent transition-colors duration-300 font-medium;
+  }
+  
+  .paper-card {
+    @apply card hover:border-accent/50 cursor-pointer;
+  }
+}
+
+
+
+
