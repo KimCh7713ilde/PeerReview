@@ -1,0 +1,27 @@
+# Root ignores
+.DS_Store
+.env
+.env.*
+
+# Node
+node_modules/
+**/node_modules/
+
+# Next.js
+.next/
+out/
+
+# Hardhat/Types
+artifacts/
+cache/
+coverage/
+
+# Logs
+*.log
+
+# Nested build outputs
+**/artifacts/
+**/cache/
+**/coverage/
+**/.next/
+**/out/
