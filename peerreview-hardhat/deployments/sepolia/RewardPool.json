@@ -1,0 +1,338 @@
+{
+  "address": "0x9376299502D3023Dda68e0A070D58F7D2B732256",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "perReviewer",
+          "type": "uint256"
+        }
+      ],
+      "name": "Distributed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Funded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "PaperFeeAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        }
+      ],
+      "name": "addPaperFee",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        }
+      ],
+      "name": "distributeReward",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "distributed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "paperFees",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "paperReviewers",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "paperId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "reviewer",
+          "type": "address"
+        }
+      ],
+      "name": "recordReviewer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0x0b60aca90aba50f14cf4e2ac16858d5bdad30134629197f1758e1b3365030272",
+  "receipt": {
+    "to": null,
+    "from": "0xaAE409CEFAAe828554dC5f9b52Fb56291961c6c7",
+    "contractAddress": "0x9376299502D3023Dda68e0A070D58F7D2B732256",
+    "transactionIndex": 61,
+    "gasUsed": "422636",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xcc2cce058cc462d7ef49b027c64142fb89eef1af4d851fededcc8318837a7e05",
+    "transactionHash": "0x0b60aca90aba50f14cf4e2ac16858d5bdad30134629197f1758e1b3365030272",
+    "logs": [],
+    "blockNumber": 9507121,
+    "cumulativeGasUsed": "12017839",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "1bf4ccfdb7ec10ce28ccf679ed126075",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.27+commit.40a35a09\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"paperId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"perReviewer\",\"type\":\"uint256\"}],\"name\":\"Distributed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Funded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"paperId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"PaperFeeAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paperId\",\"type\":\"uint256\"}],\"name\":\"addPaperFee\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paperId\",\"type\":\"uint256\"}],\"name\":\"distributeReward\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"distributed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"paperFees\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"paperReviewers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"paperId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"reviewer\",\"type\":\"address\"}],\"name\":\"recordReviewer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"RewardPool - \\u8bc4\\u5ba1\\u5956\\u52b1\\u6c60\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"\\u7b80\\u5316\\u7684\\u8d44\\u91d1\\u6c60\\uff0c\\u6309\\u8bc4\\u5ba1\\u4eba\\u6570\\u5e73\\u5206\\u5956\\u52b1\\uff0c\\u53e6\\u652f\\u6301\\u4f18\\u79c0\\u8bba\\u6587\\u989d\\u5916\\u5956\\u52b1\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/RewardPool.sol\":\"RewardPool\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/RewardPool.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.24;\\n\\n/// @title RewardPool - \\u8bc4\\u5ba1\\u5956\\u52b1\\u6c60\\n/// @notice \\u7b80\\u5316\\u7684\\u8d44\\u91d1\\u6c60\\uff0c\\u6309\\u8bc4\\u5ba1\\u4eba\\u6570\\u5e73\\u5206\\u5956\\u52b1\\uff0c\\u53e6\\u652f\\u6301\\u4f18\\u79c0\\u8bba\\u6587\\u989d\\u5916\\u5956\\u52b1\\ncontract RewardPool {\\n    struct Balance { uint256 amount; }\\n\\n    mapping(address => uint256) public balances;\\n    mapping(uint256 => address[]) public paperReviewers;\\n    mapping(uint256 => uint256) public paperFees; // \\u6295\\u7a3f\\u8d39\\u7d2f\\u8ba1\\n    mapping(uint256 => bool) public distributed;\\n\\n    event Funded(address indexed from, uint256 value);\\n    event PaperFeeAdded(uint256 indexed paperId, uint256 value);\\n    event Distributed(uint256 indexed paperId, uint256 perReviewer);\\n    event Withdraw(address indexed to, uint256 amount);\\n\\n    receive() external payable { emit Funded(msg.sender, msg.value); }\\n\\n    function addPaperFee(uint256 paperId) external payable {\\n        paperFees[paperId] += msg.value;\\n        emit PaperFeeAdded(paperId, msg.value);\\n    }\\n\\n    function recordReviewer(uint256 paperId, address reviewer) external {\\n        paperReviewers[paperId].push(reviewer);\\n    }\\n\\n    function distributeReward(uint256 paperId) external {\\n        require(!distributed[paperId], \\\"already distributed\\\");\\n        address[] storage rs = paperReviewers[paperId];\\n        require(rs.length > 0, \\\"no reviewers\\\");\\n        uint256 total = paperFees[paperId];\\n        uint256 per = total / rs.length;\\n        for (uint256 i = 0; i < rs.length; i++) {\\n            balances[rs[i]] += per;\\n        }\\n        distributed[paperId] = true;\\n        emit Distributed(paperId, per);\\n    }\\n\\n    function withdraw() external {\\n        uint256 amt = balances[msg.sender];\\n        require(amt > 0, \\\"no balance\\\");\\n        balances[msg.sender] = 0;\\n        (bool ok, ) = msg.sender.call{value: amt}(\\\"\\\");\\n        require(ok, \\\"transfer failed\\\");\\n        emit Withdraw(msg.sender, amt);\\n    }\\n}\\n\\n\\n\\n\",\"keccak256\":\"0xa0ffc1decfbf5cb2d200c751a3859c48773dd1ae028bc76369001be5a44aac84\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600e575f5ffd5b506106b18061001c5f395ff3fe60806040526004361061007c575f3560e01c8063940a4e451161004c578063940a4e45146101aa578063b2b9e2b3146101c9578063c56ce7ee14610207578063e5bae99f1461021a575f5ffd5b806327e235e3146100bc57806329e8abc1146100fa5780633ccfd60b1461016b5780638e9a2bd21461017f575f5ffd5b366100b85760405134815233907f5af8184bef8e4b45eb9f6ed7734d04da38ced226495548f46e0c8ff8d7d9a5249060200160405180910390a2005b5f5ffd5b3480156100c7575f5ffd5b506100e76100d63660046105cb565b5f6020819052908152604090205481565b6040519081526020015b60405180910390f35b348015610105575f5ffd5b506101696101143660046105eb565b5f918252600160208181526040842080549283018155845290922090910180547fffffffffffffffffffffffff0000000000000000000000000000000000000000166001600160a01b03909216919091179055565b005b348015610176575f5ffd5b50610169610251565b34801561018a575f5ffd5b506100e7610199366004610615565b60026020525f908152604090205481565b3480156101b5575f5ffd5b506101696101c4366004610615565b61038f565b3480156101d4575f5ffd5b506101f76101e3366004610615565b60036020525f908152604090205460ff1681565b60405190151581526020016100f1565b610169610215366004610615565b610522565b348015610225575f5ffd5b5061023961023436600461062c565b61057c565b6040516001600160a01b0390911681526020016100f1565b335f90815260208190526040902054806102b25760405162461bcd60e51b815260206004820152600a60248201527f6e6f2062616c616e63650000000000000000000000000000000000000000000060448201526064015b60405180910390fd5b335f818152602081905260408082208290555190919083908381818185875af1925050503d805f8114610300576040519150601f19603f3d011682016040523d82523d5f602084013e610305565b606091505b50509050806103565760405162461bcd60e51b815260206004820152600f60248201527f7472616e73666572206661696c6564000000000000000000000000000000000060448201526064016102a9565b60405182815233907f884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a94243649060200160405180910390a25050565b5f8181526003602052604090205460ff16156103ed5760405162461bcd60e51b815260206004820152601360248201527f616c72656164792064697374726962757465640000000000000000000000000060448201526064016102a9565b5f81815260016020526040902080546104485760405162461bcd60e51b815260206004820152600c60248201527f6e6f20726576696577657273000000000000000000000000000000000000000060448201526064016102a9565b5f828152600260205260408120548254909190610465908361064c565b90505f5b83548110156104c757815f5f8684815481106104875761048761066b565b5f9182526020808320909101546001600160a01b03168352820192909252604001812080549091906104ba90849061067f565b9091555050600101610469565b505f8481526003602052604090819020805460ff191660011790555184907f97791d3ac1343e05805a2f905fa80b249c2ca58cf9fef455d4fa7ec13ce58321906105149084815260200190565b60405180910390a250505050565b5f818152600260205260408120805434929061053f90849061067f565b909155505060405134815281907f3f209018b19070dffdd878be58711cb0963c18f589935fbf4d1a5e3339a98cd99060200160405180910390a250565b6001602052815f5260405f208181548110610595575f80fd5b5f918252602090912001546001600160a01b03169150829050565b80356001600160a01b03811681146105c6575f5ffd5b919050565b5f602082840312156105db575f5ffd5b6105e4826105b0565b9392505050565b5f5f604083850312156105fc575f5ffd5b8235915061060c602084016105b0565b90509250929050565b5f60208284031215610625575f5ffd5b5035919050565b5f5f6040838503121561063d575f5ffd5b50508035926020909101359150565b5f8261066657634e487b7160e01b5f52601260045260245ffd5b500490565b634e487b7160e01b5f52603260045260245ffd5b8082018082111561069e57634e487b7160e01b5f52601160045260245ffd5b9291505056fea164736f6c634300081b000a",
+  "deployedBytecode": "0x60806040526004361061007c575f3560e01c8063940a4e451161004c578063940a4e45146101aa578063b2b9e2b3146101c9578063c56ce7ee14610207578063e5bae99f1461021a575f5ffd5b806327e235e3146100bc57806329e8abc1146100fa5780633ccfd60b1461016b5780638e9a2bd21461017f575f5ffd5b366100b85760405134815233907f5af8184bef8e4b45eb9f6ed7734d04da38ced226495548f46e0c8ff8d7d9a5249060200160405180910390a2005b5f5ffd5b3480156100c7575f5ffd5b506100e76100d63660046105cb565b5f6020819052908152604090205481565b6040519081526020015b60405180910390f35b348015610105575f5ffd5b506101696101143660046105eb565b5f918252600160208181526040842080549283018155845290922090910180547fffffffffffffffffffffffff0000000000000000000000000000000000000000166001600160a01b03909216919091179055565b005b348015610176575f5ffd5b50610169610251565b34801561018a575f5ffd5b506100e7610199366004610615565b60026020525f908152604090205481565b3480156101b5575f5ffd5b506101696101c4366004610615565b61038f565b3480156101d4575f5ffd5b506101f76101e3366004610615565b60036020525f908152604090205460ff1681565b60405190151581526020016100f1565b610169610215366004610615565b610522565b348015610225575f5ffd5b5061023961023436600461062c565b61057c565b6040516001600160a01b0390911681526020016100f1565b335f90815260208190526040902054806102b25760405162461bcd60e51b815260206004820152600a60248201527f6e6f2062616c616e63650000000000000000000000000000000000000000000060448201526064015b60405180910390fd5b335f818152602081905260408082208290555190919083908381818185875af1925050503d805f8114610300576040519150601f19603f3d011682016040523d82523d5f602084013e610305565b606091505b50509050806103565760405162461bcd60e51b815260206004820152600f60248201527f7472616e73666572206661696c6564000000000000000000000000000000000060448201526064016102a9565b60405182815233907f884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a94243649060200160405180910390a25050565b5f8181526003602052604090205460ff16156103ed5760405162461bcd60e51b815260206004820152601360248201527f616c72656164792064697374726962757465640000000000000000000000000060448201526064016102a9565b5f81815260016020526040902080546104485760405162461bcd60e51b815260206004820152600c60248201527f6e6f20726576696577657273000000000000000000000000000000000000000060448201526064016102a9565b5f828152600260205260408120548254909190610465908361064c565b90505f5b83548110156104c757815f5f8684815481106104875761048761066b565b5f9182526020808320909101546001600160a01b03168352820192909252604001812080549091906104ba90849061067f565b9091555050600101610469565b505f8481526003602052604090819020805460ff191660011790555184907f97791d3ac1343e05805a2f905fa80b249c2ca58cf9fef455d4fa7ec13ce58321906105149084815260200190565b60405180910390a250505050565b5f818152600260205260408120805434929061053f90849061067f565b909155505060405134815281907f3f209018b19070dffdd878be58711cb0963c18f589935fbf4d1a5e3339a98cd99060200160405180910390a250565b6001602052815f5260405f208181548110610595575f80fd5b5f918252602090912001546001600160a01b03169150829050565b80356001600160a01b03811681146105c6575f5ffd5b919050565b5f602082840312156105db575f5ffd5b6105e4826105b0565b9392505050565b5f5f604083850312156105fc575f5ffd5b8235915061060c602084016105b0565b90509250929050565b5f60208284031215610625575f5ffd5b5035919050565b5f5f6040838503121561063d575f5ffd5b50508035926020909101359150565b5f8261066657634e487b7160e01b5f52601260045260245ffd5b500490565b634e487b7160e01b5f52603260045260245ffd5b8082018082111561069e57634e487b7160e01b5f52601160045260245ffd5b9291505056fea164736f6c634300081b000a",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "RewardPool - 评审奖励池",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "简化的资金池，按评审人数平分奖励，另支持优秀论文额外奖励",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 39194,
+        "contract": "contracts/RewardPool.sol:RewardPool",
+        "label": "balances",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 39199,
+        "contract": "contracts/RewardPool.sol:RewardPool",
+        "label": "paperReviewers",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)"
+      },
+      {
+        "astId": 39203,
+        "contract": "contracts/RewardPool.sol:RewardPool",
+        "label": "paperFees",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      },
+      {
+        "astId": 39207,
+        "contract": "contracts/RewardPool.sol:RewardPool",
+        "label": "distributed",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_uint256,t_bool)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_address)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_uint256,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
