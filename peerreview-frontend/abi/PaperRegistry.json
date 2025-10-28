@@ -1,0 +1,203 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint32",
+        "name": "averageScore",
+        "type": "uint32"
+      }
+    ],
+    "name": "PaperAverageRevealed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      }
+    ],
+    "name": "PaperMarkedExcellent",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "author",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ipfsCid",
+        "type": "string"
+      }
+    ],
+    "name": "PaperSubmitted",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPaper",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "author",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "abstractHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "string",
+            "name": "ipfsCid",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "fieldTag",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "isReviewed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isExcellent",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint32",
+            "name": "averageScore",
+            "type": "uint32"
+          }
+        ],
+        "internalType": "struct PaperRegistry.Paper",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      }
+    ],
+    "name": "markExcellent",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "protocolId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint32",
+        "name": "averageScore",
+        "type": "uint32"
+      }
+    ],
+    "name": "setAverageScore",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "abstractHash",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "ipfsCid",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "fieldTag",
+        "type": "string"
+      }
+    ],
+    "name": "submitPaper",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "paperId",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
