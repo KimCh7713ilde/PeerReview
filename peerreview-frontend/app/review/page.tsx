@@ -28,14 +28,16 @@ export default function ReviewPage() {
       const paper = await getContract(provider, networkKey, "PaperRegistry");
 
       const iface = new ethers.Interface(await import("../../abi/PaperRegistry.json").then(m => m.default));
-      const topic0 = iface.getEvent("PaperSubmitted").topicHash;
+      const ev = iface.getEvent("PaperSubmitted");
+      const topic0 = (ev as any)?.topicHash ?? (iface.getEvent("PaperSubmitted") as any).topicHash;
       const logs = await provider.getLogs({ address: paper.target as string, topics: [topic0], fromBlock: 0n, toBlock: "latest" });
 
       const list: Array<{ id: number; title: string; field: string; abstract: string; cid: string }> = [];
       for (const log of logs) {
         try {
           const parsed = iface.parseLog({ topics: [...log.topics], data: log.data });
-          const paperId: bigint = parsed.args[0];
+          if (!parsed) continue;
+          const paperId: bigint = (parsed as any).args[0];
           const p = await paper.getPaper(paperId);
           const title: string = p.title;
           if (!query || title.toLowerCase().includes(query.toLowerCase())) {

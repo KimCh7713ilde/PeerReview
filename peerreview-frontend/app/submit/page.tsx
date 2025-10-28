@@ -121,8 +121,8 @@ export default function SubmitPage() {
         for (const log of receipt.logs) {
           try {
             const parsed = iface.parseLog({ topics: [...log.topics], data: log.data });
-            if (parsed.name === "PaperSubmitted") {
-              newPaperId = Number(parsed.args[0]);
+            if (parsed && (parsed as any).name === "PaperSubmitted") {
+              newPaperId = Number((parsed as any).args[0]);
               break;
             }
           } catch {}

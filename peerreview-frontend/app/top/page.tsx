@@ -36,14 +36,16 @@ export default function TopPapersPage() {
 
         // 通过事件获取所有 paperId
         const iface = new ethers.Interface(await import("../../abi/PaperRegistry.json").then(m => m.default));
-        const topic0 = iface.getEvent("PaperSubmitted").topicHash;
+        const ev = iface.getEvent("PaperSubmitted");
+        const topic0 = (ev as any)?.topicHash ?? (iface.getEvent("PaperSubmitted") as any).topicHash;
         const logs = await provider.getLogs({ address: paper.target as string, topics: [topic0], fromBlock: 0n, toBlock: "latest" });
 
         const rows: TopItem[] = [];
         for (const log of logs) {
           try {
             const parsed = iface.parseLog({ topics: [...log.topics], data: log.data });
-            const paperId: number = Number(parsed.args[0]);
+            if (!parsed) continue;
+            const paperId: number = Number((parsed as any).args[0]);
             const p = await (paper as any).getPaper(paperId);
             if (!p.isExcellent) continue; // 仅展示优秀论文
             let cnt = 0;
@@ -128,7 +130,7 @@ export default function TopPapersPage() {
                         <span className="text-sm text-white/80">{paper.author.slice(0, 6)}...{paper.author.slice(-4)}</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Link className="btn-secondary text-sm" href={`/paper/${paper.id}`}>查看详情</Link>
+                        <Link className="btn-secondary text-sm" href={`/paper?id=${paper.id}`}>查看详情</Link>
                       </div>
                     </div>
                   </div>

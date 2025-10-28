@@ -183,7 +183,7 @@ export default function Home() {
                 </div>
 
                 <h3 className="text-xl font-serif font-semibold mb-3 line-clamp-2 group-hover:text-accent transition-colors">
-                  <Link href={`/paper/${paper.id}`}>{paper.title}</Link>
+                  <Link href={`/paper?id=${paper.id}`}>{paper.title}</Link>
                 </h3>
 
                 <div className="flex items-center justify-between pt-4 border-t border-white/10">

@@ -51,7 +51,8 @@ export default function ProfilePage() {
 
       // 通过事件查询我的投稿
       const iface = new ethers.Interface(await import("../../abi/PaperRegistry.json").then(m => m.default));
-      const topic0 = iface.getEvent("PaperSubmitted").topicHash;
+      const ev = iface.getEvent("PaperSubmitted");
+      const topic0 = (ev as any)?.topicHash ?? (iface.getEvent("PaperSubmitted") as any).topicHash;
       const topicAuthor = ethers.zeroPadValue(addr, 32);
       const logs = await provider.getLogs({
         address: paper.target as string,
@@ -64,7 +65,8 @@ export default function ProfilePage() {
       for (const log of logs) {
         try {
           const parsed = iface.parseLog({ topics: [...log.topics], data: log.data });
-          const paperId: bigint = parsed.args[0];
+          if (!parsed) continue;
+          const paperId: bigint = (parsed as any).args[0];
           const p = await paper.getPaper(paperId);
           const count = await review.getCount(paperId);
           items.push({
@@ -93,7 +95,8 @@ export default function ProfilePage() {
       // 通过 ReviewSubmitted 事件查询“我的评审”
       try {
         const rIface = new ethers.Interface(await import("../../abi/ReviewManager.json").then(m => m.default));
-        const rTopic0 = rIface.getEvent("ReviewSubmitted").topicHash;
+        const rEv = rIface.getEvent("ReviewSubmitted");
+        const rTopic0 = (rEv as any)?.topicHash ?? (rIface.getEvent("ReviewSubmitted") as any).topicHash;
         const topicReviewer = ethers.zeroPadValue(addr, 32);
         const rLogs = await provider.getLogs({
           address: review.target as string,
@@ -106,8 +109,9 @@ export default function ProfilePage() {
         for (const log of rLogs) {
           try {
             const parsed = rIface.parseLog({ topics: [...log.topics], data: log.data });
-            const paperId: number = Number(parsed.args[0]);
-            const encCommentCid: string = parsed.args[2];
+            if (!parsed) continue;
+            const paperId: number = Number((parsed as any).args[0]);
+            const encCommentCid: string = (parsed as any).args[2];
             const block = await provider.getBlock(log.blockHash!);
             const t = block?.timestamp ? new Date(Number(block.timestamp) * 1000).toLocaleString() : undefined;
             let title = "";
