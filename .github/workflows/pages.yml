@@ -35,13 +35,11 @@ jobs:
         working-directory: peerreview-frontend
         run: npm ci
 
-      - name: Build and Export
+      - name: Build
         working-directory: peerreview-frontend
         env:
           GITHUB_ACTIONS: 'true'
-        run: |
-          npm run build
-          npx next export
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
